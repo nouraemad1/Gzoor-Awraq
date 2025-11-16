@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gzoor & Awraq</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">NP</div>
+        <div>
+          <h1>Gzoor & Awraq</h1>
+          <small style="color:var(--muted)">مشتل ونباتات - Frontend Demo</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#order">اطلب الآن</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h2>نباتات طبيعية بتلمس البيت</h2>
+        <p>اختاري نباتات للديكور، للهواء النظيف، أو للمشتل. نصائح العناية موجودة مع كل نبات.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">تسوقي الآن</button>
+          <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">تواصل معنا</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-plant">🌿</div>
+        <div style="text-align:right">
+          <strong>خبرة في العناية بالنباتات المنزلية</strong>
+          <div style="color:var(--muted)">نصائح بالري والضوء والسماد</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <div class="search">
+        <input id="searchInput" placeholder="ابحثي عن نبات أو اسم" aria-label="Search plants">
+        <select id="categoryFilter" class="select">
+          <option value="all">كل التصنيفات</option>
+          <option value="indoor">داخلية</option>
+          <option value="outdoor">خارجية</option>
+          <option value="succulent">عصارية</option>
+        </select>
+      </div>
+      <select id="sortBy" class="select">
+        <option value="default">الترتيب الافتراضي</option>
+        <option value="price-asc">السعر: الأقل أولاً</option>
+        <option value="price-desc">السعر: الأعلى أولاً</option>
+      </select>
+      <button class="btn ghost" id="resetBtn">مسح الفلاتر</button>
+    </div>
+
+    <section id="products">
+      <div class="grid" id="productsGrid"></div>
+    </section>
+
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 id="modalTitle"></h3>
+          <button class="close" id="modalClose">✕</button>
+        </div>
+        <div class="content">
+          <img id="modalImg" src="" alt="plant image">
+          <div>
+            <p id="modalDesc"></p>
+            <div class="tags" id="modalTags"></div>
+            <div style="margin-top:12px" class="meta">
+              <div class="price" id="modalPrice"></div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" id="orderFromModal">اطلب الآن</button>
+                <button class="btn ghost" id="shareBtn">مشاركة</button>
+              </div>
+            </div>
+            <h4 style="margin-top:14px">تعليمات العناية</h4>
+            <ul id="careList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="order" class="order-section">
+      <h3>نموذج الطلب</h3>
+      <p style="color:var(--muted)">املأي البيانات وسيصلكم تأكيد عبر الرقم</p>
+      <form id="orderForm">
+        <input type="text" id="name" placeholder="الاسم" required>
+        <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+        <input type="text" id="city" placeholder="المحافظة" required>
+        <input type="text" id="address" placeholder="العنوان" class="full" required>
+        <input type="text" id="plantName" placeholder="اسم النبات" required>
+        <textarea id="notes" placeholder="ملاحظات" rows="3" class="full"></textarea>
+        <button type="submit" class="submit">إرسال الطلب</button>
+      </form>
+      <div id="orderMsg" style="margin-top:10px;color:var(--green);display:none"></div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h3>اتصل بنا</h3>
+      <p style="color:var(--muted)">العنوان: شارع المثال - المدينة</p>
+      <p style="color:var(--muted)">الهاتف 01096844789</p>
+      <div style="margin-top:8px">
+        <iframe src="https://www.google.com/maps?q=cairo&amp;output=embed" style="width:100%;height:220px;border:0;border-radius:10px"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Gzoor & Awraq — تصميم Frontend Demo
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
