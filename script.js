@@ -1,10 +1,10 @@
 const products = [
-  {id:1,name:'فيكس الاستوائي',category:'indoor',price:150, img:'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60',desc:'نبتة أوراقها كبيرة وتحب الظل الجزئي',care:['ماء مرة كل 7-10 أيام','ضوء غير مباشر','تسميد خفيف كل شهر']},
-  {id:2,name:'صبار السعادة',category:'succulent',price:45,img:'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=60',desc:'صبار صغير سهل العناية مناسب للمكاتب',care:['ماء خفيف كل 2-3 أسابيع','ضوء كامل']},
-  {id:3,name:'أوركيد وردي',category:'indoor',price:220,img:'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60',desc:'أوركيد أنيق يحتاج عناية خاصة',care:['ماء مرة أسبوعيا','ضوء ساطع لكن غير مباشر','تسميد خاص بالأوركيد']},
-  {id:4,name:'نعناع حديقة',category:'outdoor',price:35,img:'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=60',desc:'نبتة عطرية سهلة النمو في الحديقة',care:['ماء منتظم','شمس جزئية إلى كاملة']},
-  {id:5,name:'بوتس متسلّق',category:'indoor',price:90,img:'https://images.unsplash.com/photo-1524594154904-71a00403ff4b?auto=format&fit=crop&w=800&q=60',desc:'نبات متسلق يتحمل الإضاءة الخفيفة',care:['سقيا معتدلة','يُقطّف الأوراق الذابلة']},
-  {id:6,name:'لافندر عطري',category:'outdoor',price:120,img:'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=60',desc:'نبات عطري مزهر للحديقة',care:['شمس كاملة','تربة جيدة التصريف']}
+  {id:1,name:'فيكس الاستوائي',category:'indoor',price:150, img:'https://www.picturethisai.com/image-handle/website_cmsname/image/1080/349647158659973121.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0',desc:'نبتة أوراقها كبيرة وتحب الظل الجزئي',care:['ماء مرة كل 7-10 أيام','ضوء غير مباشر','تسميد خفيف كل شهر']},
+  {id:2,name:'صبار السعادة',category:'succulent',price:45,img:'https://plantshome.sa/wp-content/uploads/2024/09/%D8%B5%D8%A8%D8%A7%D8%B1-%D8%A8%D9%88%D8%B1%D9%88%D8%AF-%D8%AD%D9%85%D8%B1%D8%A7%D8%A1-2.jpg',desc:'صبار صغير سهل العناية مناسب للمكاتب',care:['ماء خفيف كل 2-3 أسابيع','ضوء كامل']},
+  {id:3,name:'أوركيد وردي',category:'indoor',price:220,img:'https://cdn.salla.sa/EZYlr/0T5VfKZe2Dwls0smKAu7bfcbNsOj3eYr8nuPDsX6.jpg',desc:'أوركيد أنيق يحتاج عناية خاصة',care:['ماء مرة أسبوعيا','ضوء ساطع لكن غير مباشر','تسميد خاص بالأوركيد']},
+  {id:4,name:'نعناع حديقة',category:'outdoor',price:35,img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Mint-leaves-2007.jpg/1200px-Mint-leaves-2007.jpg',desc:'نبتة عطرية سهلة النمو في الحديقة',care:['ماء منتظم','شمس جزئية إلى كاملة']},
+  {id:5,name:'بوتس متسلّق',category:'indoor',price:90,img:'https://media.zid.store/6a48cfed-fe16-4e60-b980-a71ec81484c3/38756929-6f63-4447-9106-3d12e638d66f.jpg',desc:'نبات متسلق يتحمل الإضاءة الخفيفة',care:['سقيا معتدلة','يُقطّف الأوراق الذابلة']},
+  {id:6,name:'لافندر عطري',category:'outdoor',price:120,img:'https://cdn.altibbi.com/cdn/cache/1000x500/image/2020/05/12/8477ae2873ac7c67e2521e37d9f10907.png.webp',desc:'نبات عطري مزهر للحديقة',care:['شمس كاملة','تربة جيدة التصريف']}
 ];
 
 const grid = document.getElementById('productsGrid');
@@ -118,3 +118,4 @@ document.getElementById('shareBtn').addEventListener('click',()=>{
 });
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape') modalBackdrop.style.display='none'});
+
